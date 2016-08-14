@@ -1,0 +1,13 @@
+<div *ngIf="offices">
+  <div *ngFor="let office of offices">
+    <div class="card">
+      <div class="card-block">
+        <h4>{{ office.officeCode }}</h4>
+        <h3 class="card-title">{{ office.country }} - {{ office.state }} - {{ office.city }}</h3>
+        <h5>{{ office.phone }}</h5>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/new" class="btn btn-primary">New Office</a>
+</div>

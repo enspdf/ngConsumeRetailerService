@@ -1,0 +1,11 @@
+<h1>New Office</h1>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input type="text" name="countryStr" [(ngModel)]="countryStr" class="form-control" placeholder="Country name">
+    <input type="text" name="phoneStr" [(ngModel)]="phoneStr" class="form-control" placeholder="Phone">
+    <input type="text" name="cityStr" [(ngModel)]="cityStr" class="form-control" placeholder="City">
+    <input type="text" name="stateStr" [(ngModel)]="stateStr" class="form-control" placeholder="State">
+  </div>
+  <button type="submit" class="btn btn-primary" >Add Office</button>
+</form>
+<a routerLink="/" class="btn btn-default">Back</a>
