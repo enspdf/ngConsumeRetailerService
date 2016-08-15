@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { OfficeService } from '../../services/office.service';
-import { ActivatedRoute } from '@angular/router';
 import { Office } from '../../Models/Office';
 
 @Component({
@@ -13,7 +12,7 @@ export class OfficeComponent implements OnInit{
 
   offices: Office[];
 
-  constructor(private _officeService : OfficeService, private _router : ActivatedRoute) {
+  constructor(private _officeService : OfficeService) {
 
   }
 

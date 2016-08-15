@@ -1,4 +1,6 @@
 <div *ngIf="offices">
+  <br/>
+  <a routerLink="/new" class="btn btn-primary">New Office</a>
   <div *ngFor="let office of offices">
     <div class="card">
       <div class="card-block">
@@ -9,5 +11,4 @@
       </div>
     </div>
   </div>
-  <a routerLink="/new" class="btn btn-primary">New Office</a>
 </div>

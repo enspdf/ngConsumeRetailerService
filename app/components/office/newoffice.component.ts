@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { OfficeService } from '../../services/office.service';
-import { ActivatedRoute } from '@angular/router';
-import { Office } from '../../Models/Office';
 
 @Component({
   moduleId: module.id,
@@ -14,9 +12,17 @@ export class NewOfficeComponent {
   phoneStr : string;
   cityStr :  string;
   stateStr : string;
+  result : string;
+
+  constructor(private _officeService : OfficeService) {
+
+  }
 
   onSubmit() {
-    console.log("form submitted");
+    this._officeService.saveOffice(this.countryStr, this.phoneStr, this.cityStr, this.stateStr)
+      .subscribe(result => {
+        this.result = result;
+      })
   }
 
 }
